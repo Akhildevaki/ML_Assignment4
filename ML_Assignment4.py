@@ -18,7 +18,7 @@ df = pd.read_csv('C:\\Users\\Rams\Downloads\\datasets\\Salary_Data.csv')
 # In[21]:
 
 
-X = df.iloc[:, :-1].values   #ecluding last column i.e., years of experience column
+X = df.iloc[:, :-1].values   #excluding last column i.e., years of experience column
 Y = df.iloc[:, 1].values     #only salary column
 
 
@@ -60,12 +60,16 @@ import matplotlib.pyplot as plt
 plt.scatter(X_train, Y_train)
 plt.plot(X_train, regressor.predict(X_train), color='orange')
 plt.title('Training set')
+plt.xlabel("Years of Experience")
+plt.ylabel("Salary")
 plt.show()
 
 # Testing Data set
 plt.scatter(X_test, Y_test)
 plt.plot(X_test, regressor.predict(X_test), color='orange')
 plt.title('Testing set')
+plt.xlabel("Years of Experience")
+plt.ylabel("Salary")
 plt.show()
 
 
